@@ -87,7 +87,7 @@
           padding: .5rem 1rem;
           font-weight: 400;
           letter-spacing: .02em;
-          transition: .2s transform ease-in-out;
+          transition: .2s transform ease-in-out, .4s color ease-in-out;
 
           @media (max-width: 991.98px) {
             padding: .5rem;

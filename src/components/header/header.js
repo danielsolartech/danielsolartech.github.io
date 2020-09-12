@@ -12,6 +12,22 @@ import { Link } from 'react-router-dom';
 import './header.scss';
 
 const Header = () => {
+  const [currentPage, setCurrentPage] = React.useState('about-me');
+
+  const pages = document.location.pathname.split('/').slice(1);
+
+  if (pages[0].length && currentPage != pages[0]) {
+    setCurrentPage(pages[0]);
+  }
+
+  function isPage(page) {
+    if (currentPage === page) {
+      return 'active';
+    }
+
+    return '';
+  }
+
   return (
     <header className="header">
       <div className="header__left">
@@ -22,16 +38,16 @@ const Header = () => {
       </div>
       <div className="header__right">
         <ul className="header__right--navigator">
-          <li className="active"><Link to="/#about-me">
+          <li className={isPage('about-me')}><Link to="/about-me" onClick={() => setCurrentPage('about-me')}>
             About Me
           </Link></li>
-          <li><Link to="/#projects">
+          <li className={isPage('projects')}><Link to="/projects" onClick={() => setCurrentPage('projects')}>
             Projects
           </Link></li>
-          <li><Link to="/#skills">
+          <li className={isPage('skills')}><Link to="/skills" onClick={() => setCurrentPage('skills')}>
             Skills
           </Link></li>
-          <li><Link to="/#contact">
+          <li className={isPage('contact')}><Link to="/contact" onClick={() => setCurrentPage('contact')}>
             Contact
           </Link></li>
         </ul>

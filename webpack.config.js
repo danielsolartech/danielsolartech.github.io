@@ -85,6 +85,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     host: process.env.HOST || '0.0.0.0',
     port: process.env.PORT || 8000,
+    historyApiFallback: true,
     publicPath: '/',
     inline: true,
     open: true,

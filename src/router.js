@@ -12,16 +12,14 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/header/header';
 import Home from './pages/home';
 
-const Router = () => {
-  return (
-    <BrowserRouter>
-      <Header />
+const Router = () => (
+  <BrowserRouter>
+    <Header />
 
-      <Switch>
-        <Route path="*" component={Home} />
-      </Switch>
-    </BrowserRouter>
-  );
-};
+    <Switch>
+      <Route path="*" component={Home} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Router;

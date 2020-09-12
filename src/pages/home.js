@@ -9,14 +9,13 @@
 
 import React from 'react';
 import AboutMe from '../components/aboutMe/aboutMe';
-import './home.scss';
+import Contact from '../components/contact/contact';
 
-const Home = () => {
-  return (
-    <div className="container container--home">
-      <AboutMe />
-    </div>
-  );
-};
+const Home = () => (
+  <div className="container">
+    <AboutMe />
+    <Contact />
+  </div>
+);
 
 export default Home;
