@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+/* Load Fonts */
+@font-face {
+  font-family: Montserrat;
+  src: url('../public/Montserrat-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../public/Montserrat-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../public/Montserrat-SemiBold.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../public/Montserrat-Bold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: Montserrat;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: $colorLight;
+}
+
+body {
+  top: 0;
+  left: 0;
+  background-color: $backgroundLight;
+}
