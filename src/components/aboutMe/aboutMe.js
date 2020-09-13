@@ -10,33 +10,43 @@
 import React from 'react';
 import './aboutMe.scss';
 
-const AboutMe = () => (
-  <section className="aboutMe" id="aboutMe">
-    <div className="aboutMe__content">
-      <div className="aboutMe__content__avatar" />
-      <div className="aboutMe__content__info">
-        <h1>About me</h1>
-        <p>
-          Multiplataform software developer with 2 years of experience in
-          backend and frontend process with JavaScript, TypeScript, Rust,
-          NodeJS, Deno, Ionic and Go.
-        </p>
-        <p>
-          Besides, i've made works as freelancer with mobile apps or web apps,
-          and bots for Discord communities.
-        </p>
-        <p>
-          "The life is an adventure without end."
-        </p>
+const AboutMe = ({ observer }) => {
+  const [element, setElement] = React.useState(null);
+
+  React.useEffect(() => {
+    if (element) {
+      observer.observe(element);
+    }
+  }, [element]);
+
+  return (
+    <section className="aboutMe" ref={setElement} data-page="about-me">
+      <div className="aboutMe__content">
+        <div className="aboutMe__content__avatar" />
+        <div className="aboutMe__content__info">
+          <h1>About me</h1>
+          <p>
+            Multiplataform software developer with 2 years of experience in
+            backend and frontend process with JavaScript, TypeScript, Rust,
+            NodeJS, Deno, Ionic and Go.
+          </p>
+          <p>
+            Besides, i've made works as freelancer with mobile apps or web apps,
+            and bots for Discord communities.
+          </p>
+          <p>
+            "The life is an adventure without end."
+          </p>
+        </div>
       </div>
-    </div>
-    <div className="aboutMe__country">
-      <div className="aboutMe__country__flag" />
-      <div className="aboutMe__country__span">
-        Medellín, Colombia
+      <div className="aboutMe__country">
+        <div className="aboutMe__country__flag" />
+        <div className="aboutMe__country__span">
+          Medellín, Colombia
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default AboutMe;

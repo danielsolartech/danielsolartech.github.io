@@ -11,13 +11,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.scss';
 
-const Header = () => {
+const Header = ({ getObserver }) => {
+  const [isActive, setActive] = React.useState(true);
+  const [isChanging, setChanging] = React.useState(false);
   const [currentPage, setCurrentPage] = React.useState('about-me');
+  const [currentEntry, setCurrentEntry] = React.useState('about-me');
+  const [firstEntry, setFirstEntry] = React.useState(false);
+  const [lastScroll, setLastScroll] = React.useState(window.scrollY);
+  const [isActiveMobile, setActiveMobile] = React.useState(false);
 
   const pages = document.location.pathname.split('/').slice(1);
 
-  if (pages[0].length && currentPage != pages[0]) {
+  if (pages[0].length && currentPage != pages[0] && !firstEntry) {
     setCurrentPage(pages[0]);
+    setFirstEntry(true);
   }
 
   function isPage(page) {
@@ -28,8 +35,64 @@ const Header = () => {
     return '';
   }
 
+  window.onscroll = () => {
+    const currentScroll = window.scrollY;
+
+    setActive(currentScroll < lastScroll);
+    setLastScroll(currentScroll);
+    setActiveMobile(false);
+  };
+
+  getObserver(new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const entryPage = entry.target.getAttribute('data-page');
+
+        if (entryPage && entryPage.length) {
+          setChanging(true);
+          setCurrentPage(entryPage);
+          setCurrentEntry(entryPage);
+
+          history.pushState(null, document.title, `/${entryPage}`);
+
+          setChanging(false);
+        }
+      }
+    });
+  }, { rootMargin: '0px 0px -85% 0px' }));
+
+  function scrollToPage(page) {
+    const element = document.querySelector(`[data-page="${page}"]`);
+
+    if (element) {
+      setTimeout(() => {
+        setChanging(true);
+        setCurrentEntry(page);
+        setActive(page === 'about-me');
+        setActiveMobile(false);
+
+        element.scrollIntoView({
+          behavior: 'smooth',
+        });
+
+        setChanging(false);
+      }, 100);
+    }
+  }
+
+  React.useEffect(() => {
+    if (currentEntry !== currentPage && !isChanging) {
+      scrollToPage(currentPage);
+    }
+  }, [currentEntry, currentPage]);
+
+  function changePage(page) {
+    setCurrentPage(page);
+    scrollToPage(page);
+  }
+
   return (
-    <header className="header">
+    <header className={`header ${isActive ? 'header--active' : ''}`}>
       <div className="header__left">
         <div className="header__left--icon" />
         <div className="header__left--title">
@@ -37,17 +100,22 @@ const Header = () => {
         </div>
       </div>
       <div className="header__right">
-        <ul className="header__right--navigator">
-          <li className={isPage('about-me')}><Link to="/about-me" onClick={() => setCurrentPage('about-me')}>
+        <button className="header__right--toggle" onClick={() => setActiveMobile(!isActiveMobile)}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+          </svg>
+        </button>
+        <ul className={`header__right--navigator ${isActiveMobile ? 'header__right--navigator--active' : ''}`}>
+          <li className={isPage('about-me')}><Link to="/about-me" onClick={() => changePage('about-me')}>
             About Me
           </Link></li>
-          <li className={isPage('projects')}><Link to="/projects" onClick={() => setCurrentPage('projects')}>
+          <li className={isPage('projects')}><Link to="/projects" onClick={() => changePage('projects')}>
             Projects
           </Link></li>
-          <li className={isPage('skills')}><Link to="/skills" onClick={() => setCurrentPage('skills')}>
+          <li className={isPage('skills')}><Link to="/skills" onClick={() => changePage('skills')}>
             Skills
           </Link></li>
-          <li className={isPage('contact')}><Link to="/contact" onClick={() => setCurrentPage('contact')}>
+          <li className={isPage('contact')}><Link to="/contact" onClick={() => changePage('contact')}>
             Contact
           </Link></li>
         </ul>

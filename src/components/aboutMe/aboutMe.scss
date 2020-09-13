@@ -4,6 +4,7 @@
   $borderRadius: 6px;
 
   height: 100vh;
+  padding-top: $headerSize;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -12,6 +13,7 @@
   @media (max-width: 767.98px) {
     height: auto;
     padding: $paddingLeftRightMobile;
+    padding-top: calc(#{$headerSize} + #{$paddingLeftRightMobile});
   }
 
   @media (max-width: 575.98px) {

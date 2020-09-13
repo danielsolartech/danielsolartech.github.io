@@ -12,14 +12,20 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/header/header';
 import Home from './pages/home';
 
-const Router = () => (
-  <BrowserRouter>
-    <Header />
+const Router = () => {
+  let currentObserver = null;
 
-    <Switch>
-      <Route path="*" component={Home} />
-    </Switch>
-  </BrowserRouter>
-);
+  return (
+    <BrowserRouter>
+      <Header getObserver={(observer) => {
+        currentObserver= observer;
+      }} />
+
+      <Switch>
+        <Route path="*" render={() => <Home observer={currentObserver} />} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
 export default Router;
