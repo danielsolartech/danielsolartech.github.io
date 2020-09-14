@@ -18,7 +18,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Header getObserver={(observer) => {
-        currentObserver= observer;
+        currentObserver = observer;
       }} />
 
       <Switch>

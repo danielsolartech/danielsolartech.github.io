@@ -2,11 +2,11 @@
 
 .contact {
   width: 100%;
-  padding: 1rem $paddingLeftRight;
+  padding: $paddingLeftRightMobile $paddingLeftRight;
   background-color: white;
 
   @media (max-width: 991.98px) {
-    padding: 1rem $paddingLeftRightTablet;
+    padding: $paddingLeftRightMobile $paddingLeftRightTablet;
   }
 
   @media (max-width: 575.98px) {
