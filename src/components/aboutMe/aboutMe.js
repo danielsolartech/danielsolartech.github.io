@@ -33,14 +33,14 @@ const AboutMe = ({ observer }) => {
       <div className="aboutMe__right">
         <h1>About me</h1>
         <p>
-          Multiplataform software developer with 2 years of experience in backend and frontend process with JavaScript,
-          TypeScript, Rust, NodeJS, Deno, Ionic and Go.
+          Multiplatform software developer with 2 years of experience in backend and frontend process with JavaScript,
+          TypeScript, Rust, NodeJS, ReactJS, Ionic and SASS.
         </p>
         <p>
           Besides, i've made works as freelancer with mobile apps or web apps, and bots for Discord communities.
         </p>
         <p>
-          "The life is an adverture without end."
+          "The life is an adventure without end."
         </p>
         <div className="aboutMe__right--country">
           <div className="aboutMe__right--country__flag" />
