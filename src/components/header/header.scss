@@ -107,6 +107,7 @@
         }
         &.active > a {
           color: $secondaryLight;
+          font-weight: 500;
         }
         & > a {
           display: block;
@@ -132,4 +133,3 @@
     }
   }
 }
-

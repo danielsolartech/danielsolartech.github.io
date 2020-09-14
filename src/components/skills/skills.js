@@ -28,9 +28,7 @@ const Skills = ({ observer }) => {
     <section className="skills" ref={setElement} data-page="skills">
       <h1 className="skills__title">Skills</h1>
       <div className="skills__grid">
-        {skillsData.sort((a,b ) => (
-          a.year < b.year ? 1 : a.year > b.year ? -1 : 0
-        )).slice(0, skillsPerPage * currentPage).map((skillData, i) => (
+        {skillsData.sort((a,b ) => b.year - a.year).slice(0, skillsPerPage * currentPage).map((skillData, i) => (
           <SkillCard {...skillData} key={`skill_${i + 1}`} />
         ))}
       </div>

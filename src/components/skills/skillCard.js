@@ -15,7 +15,7 @@ const SkillCard = ({ name, image, description, year }) => (
     <div className="skill-card__header">
       <div className="skill-card__header--image" style={{
         backgroundImage: `url('${image}')`,
-      }} />
+      }} alt={`${name} icon`} />
       <div className="skill-card__header--info">
         <div className="skill-card__header--info__name">
           {name}

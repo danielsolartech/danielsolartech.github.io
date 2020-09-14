@@ -106,16 +106,16 @@ const Header = ({ getObserver }) => {
           </svg>
         </button>
         <ul className={`header__right--navigator ${isActiveMobile ? 'header__right--navigator--active' : ''}`}>
-          <li className={isPage('about-me')}><Link to="/about-me" onClick={() => changePage('about-me')}>
-            About Me
+          <li className={isPage('about-me')}><Link to="/about-me" alt="About me section" onClick={() => changePage('about-me')}>
+            About me
           </Link></li>
-          <li className={isPage('projects')}><Link to="/projects" onClick={() => changePage('projects')}>
+          <li className={isPage('projects')}><Link to="/projects" alt="My projects section" onClick={() => changePage('projects')}>
             Projects
           </Link></li>
-          <li className={isPage('skills')}><Link to="/skills" onClick={() => changePage('skills')}>
+          <li className={isPage('skills')}><Link to="/skills" alt="My skills section" onClick={() => changePage('skills')}>
             Skills
           </Link></li>
-          <li className={isPage('contact')}><Link to="/contact" onClick={() => changePage('contact')}>
+          <li className={isPage('contact')}><Link to="/contact" alt="My contact section" onClick={() => changePage('contact')}>
             Contact
           </Link></li>
         </ul>

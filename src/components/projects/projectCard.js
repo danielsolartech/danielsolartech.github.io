@@ -12,7 +12,9 @@ import './projectCard.scss';
 
 const ProjectCard = ({ image, category, name, description, date, onClick }) => (
   <div className="project-card">
-    <div className="project-card__image"  style={{ backgroundImage: `url('${image}')` }}>
+    <div className="project-card__image" style={{
+      backgroundImage: `url('${image}')`,
+      }} alt={`${name} image`}>
       <div className="project-card__image--date">{date}</div>
     </div>
     <div className="project-card__info">
