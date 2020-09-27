@@ -14,7 +14,7 @@ RewriteEngine on
 RewriteRule .* index.html
 ```
 
-## [License](./LICENSE)
-
 ## Contributors
-* **Daniel Solarte** [GitHub](https://github.com/danielsolartech)
+* **Daniel Solarte** - Initial Work - [GitHub](https://github.com/danielsolartech)
+
+## Licensing

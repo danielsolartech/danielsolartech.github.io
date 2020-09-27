@@ -1,0 +1,54 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist/ && tsc",
+    "dev": "nodemon",
+    "dev:command": "npm run build && npm run start:ts",
+    "lint": "pretty-quick --pattern '**/*.ts' --verbose && eslint ./src --fix",
+    "start": "node ./dist/index.js",
+    "start:ts": "ts-node ./src/index.ts"
+  },
+  "keywords": [
+    "mysql",
+    "typeorm",
+    "express"
+  ],
+  "author": "Daniel Solarte Chaverra",
+  "license": "MIT",
+  "_moduleAliases": {
+    "@CoreManager": "dist/core/CoreManager.js",
+    "@Core": "dist/core",
+    "@Entities": "dist/database/entities",
+    "@DatabaseManager": "dist/database/DatabaseManager.js",
+    "@ServerManager": "dist/server/ServerManager.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.26"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/mysql": "^2.15.15",
+    "@types/node": "^14.11.2",
+    "@types/ws": "^7.2.6",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}

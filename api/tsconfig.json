@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "strict": false,
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "importHelpers": true,
+    "outDir": "./dist/",
+    "rootDir": "./src/",
+    "baseUrl": "./src/",
+    "paths": {
+      "@CoreManager": ["core/CoreManager.ts"],
+      "@Core/*": ["core/*"],
+      "@Entities/*": ["database/entities/*"],
+      "@DatabaseManager": ["database/DatabaseManager.ts"],
+      "@ServerManager": ["server/ServerManager.ts"]
+    },
+  },
+  "exclude": [
+    "./node_modules/",
+    "./dist/",
+  ],
+  "include": [
+    "./src/",
+  ],
+}
