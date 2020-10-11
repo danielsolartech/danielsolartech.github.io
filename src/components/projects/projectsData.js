@@ -119,10 +119,10 @@ export default [
   {
     category: 'Back-End',
     name: 'SpookedCMS',
-    description: 'CMS template for NodeJS with Themes and Plugins.',
+    description: 'CMS for NodeJS with Themes and Plugins.',
     date: 'August of 2020',
     links: {
-      GitHub: 'https://github.com/danielsolartech/spooked-cms-template',
+      GitHub: 'https://github.com/danielsolartech/spooked-cms',
     },
     tags: [
       'BackEnd',
@@ -130,7 +130,9 @@ export default [
       'JavaScript',
       'TypeScript',
       'MySQL',
+      'TypeORM',
       'MongoDB',
+      'Mongoose',
       'CMS',
     ],
   },
