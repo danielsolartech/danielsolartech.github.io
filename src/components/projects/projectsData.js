@@ -9,6 +9,60 @@
 
 export default [
   {
+    image: require('../../../public/projects/vscode_sflynlang.png').default,
+    category: 'Back-End',
+    name: 'Sflynlang Extension for VS Code',
+    description: 'Official extension for Visual Studio Code.',
+    date: 'October of 2020',
+    links: {
+      GitHub: 'https://github.com/sflynlang/vscode-sflynlang',
+      Marketplace: 'https://marketplace.visualstudio.com/items?itemName=sflynlang.sflynlang',
+    },
+    tags: [
+      'VS Code',
+      'Extension',
+      'JavaScript',
+      'Sflynlang',
+    ],
+  },
+  {
+    category: 'Back-End',
+    name: 'Discord Bot (nhcarrigan)',
+    description: 'I made a refactor to the Discord bot of nhcarrigan.',
+    date: 'October of 2020',
+    links: {
+      'GitHub (Bot)': 'https://github.com/nhcarrigan/discord-bot',
+      'GitHub (Documentation)': 'https://github.com/nhcarriggan/discord-bot-documentation',
+    },
+    tags: [
+      'BackEnd',
+      'NodeJS',
+      'JavaScript',
+      'TypeScript',
+      'DiscordJS',
+      'Contribution',
+      'Refactor',
+    ],
+  },
+  {
+    category: 'Back-End',
+    name: 'Discord Bot (LemonCod3)',
+    description: 'I made a refactor to the Discord bot of LemonCod3.',
+    date: 'October of 2020',
+    links: {
+      GitHub: 'https://github.com/LemonCod3/bot-discord'
+    },
+    tags: [
+      'BackEnd',
+      'NodeJS',
+      'JavaScript',
+      'TypeScript',
+      'DiscordJS',
+      'Contribution',
+      'Refactor',
+    ],
+  },
+  {
     image: require('../../../public/projects/portfolio.png').default,
     category: 'Front-End',
     name: 'Portfolio',
@@ -28,13 +82,30 @@ export default [
     ],
   },
   {
-    image: require('../../../public/projects/sflyn_icon.jpg').default,
+    image: require('../../../public/projects/sflynlang_icon.png').default,
     category: 'Back-End',
-    name: 'Sflynlang',
-    description: 'Multiparadigm programming language.',
+    name: 'Sflynlang Discord Bot',
+    description: 'Bot for the Official Discord Server of Sflynlang.\r\n\r\n- Make suggestions.\r\n- Welcomes messages.',
+    date: 'September of 2020',
+    links: {
+      GitHub: 'https://github.com/sflynlang/sflynlang-bot',
+    },
+    tags: [
+      'BackEnd',
+      'NodeJS',
+      'JavaScript',
+      'TypeScript',
+      'DiscordJS',
+    ],
+  },
+  {
+    image: require('../../../public/projects/sflynlang_code.png').default,
+    category: 'Back-End',
+    name: 'Sflynlang Compiler',
+    description: 'Compiler for the Sflynlang programming language.',
     date: 'August of 2020',
     links: {
-      GitHub: 'https://github.com/sflynlang',
+      GitHub: 'https://github.com/sflynlang/sflynlang-compiler',
     },
     tags: [
       'BackEnd',
@@ -48,10 +119,10 @@ export default [
   {
     category: 'Back-End',
     name: 'SpookedCMS',
-    description: 'CMS template for NodeJS with Themes and Plugins.',
+    description: 'CMS for NodeJS with Themes and Plugins.',
     date: 'August of 2020',
     links: {
-      GitHub: 'https://github.com/danielsolartech/spooked-cms-template',
+      GitHub: 'https://github.com/danielsolartech/spooked-cms',
     },
     tags: [
       'BackEnd',
@@ -59,13 +130,15 @@ export default [
       'JavaScript',
       'TypeScript',
       'MySQL',
+      'TypeORM',
       'MongoDB',
+      'Mongoose',
       'CMS',
     ],
   },
   {
+    image: require('../../../public/projects/rust_notes_cli.png').default,
     category: 'Back-End',
-    image: 'https://i.imgur.com/UzajtnZ.png',
     name: 'Rust Notes CLI',
     description: 'Manage notes in your computer using the console.',
     date: 'August of 2020',
@@ -100,8 +173,8 @@ export default [
     ],
   },
   {
+    image: require('../../../public/projects/nextmusic_concept.png').default,
     category: 'Design',
-    image: 'https://raw.githubusercontent.com/danielsolartech/nextmusic/master/images/nextmusic_concept.png',
     name: 'NextMusic Concept',
     description: 'Concept of NextMusic APP.',
     date: 'July of 2020',
@@ -111,8 +184,8 @@ export default [
     ],
   },
   {
-    category: 'Design',
     image: require('../../../public/projects/fazt_community_landing_page.jpeg').default,
+    category: 'Design',
     name: 'Fazt Community Landing Page Design',
     description: 'Temporary landing page for faztcommunity.dev.',
     date: 'July of 2020',
@@ -141,6 +214,31 @@ export default [
       'TypeScript',
       'DiscordJS',
       'Contribution',
+    ],
+  },
+  {
+    category: 'Fullstack',
+    name: 'NextChat',
+    description: 'Messages social network.\r\n\r\n- You can send and receive messages.\r\n- Verify your account using your e-mail.\r\n- Send friend requests.',
+    date: 'June of 2020',
+    links: {
+      'GitHub (API)': 'https://github.com/danielsolartech/nextchat-api',
+      'GitHub (WEB)': 'https://github.com/danielsolartech/nextchat-web',
+    },
+    tags: [
+      'BackEnd',
+      'NodeJS',
+      'JavaScript',
+      'TypeScript',
+      'MySQL',
+      'TypeORM',
+      'Socket.IO',
+      'SendGrid',
+      'FrontEnd',
+      'ReactJS',
+      'Redux',
+      'Webpack',
+      'Babel',
     ],
   },
   {
