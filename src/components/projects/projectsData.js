@@ -22,14 +22,14 @@ export default [
       'VS Code',
       'Extension',
       'JavaScript',
-      'Sflynlang'
+      'Sflynlang',
     ],
   },
   {
     category: 'Back-End',
-    name: "Discord Bot (nhcarrigan)",
-    description: `Make a refactor to the Discord bot of nhcarrigan.`,
-    date: `October of 2020`,
+    name: 'Discord Bot (nhcarrigan)',
+    description: 'I made a refactor to the Discord bot of nhcarrigan.',
+    date: 'October of 2020',
     links: {
       'GitHub (Bot)': 'https://github.com/nhcarrigan/discord-bot',
       'GitHub (Documentation)': 'https://github.com/nhcarriggan/discord-bot-documentation',
@@ -41,7 +41,25 @@ export default [
       'TypeScript',
       'DiscordJS',
       'Contribution',
-      'Refactor'
+      'Refactor',
+    ],
+  },
+  {
+    category: 'Back-End',
+    name: 'Discord Bot (LemonCod3)',
+    description: 'I made a refactor to the Discord bot of LemonCod3.',
+    date: 'October of 2020',
+    links: {
+      GitHub: 'https://github.com/LemonCod3/bot-discord'
+    },
+    tags: [
+      'BackEnd',
+      'NodeJS',
+      'JavaScript',
+      'TypeScript',
+      'DiscordJS',
+      'Contribution',
+      'Refactor',
     ],
   },
   {
