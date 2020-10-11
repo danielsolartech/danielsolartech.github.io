@@ -9,13 +9,13 @@
 
 export default [
   {
-    name: 'Rust',
+    name: 'Rustlang',
     image: require('../../../public/skills/rust.png').default,
     description: 'Traits, structs, functions and pointers.',
     year: 2020,
   },
   {
-    name: 'Go',
+    name: 'Golang',
     image: require('../../../public/skills/go.png').default,
     description: 'Structs, pointers, slices and maps.',
     year: 2020,
