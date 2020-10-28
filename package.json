@@ -2,9 +2,9 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Personal portfolio.",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "rm -rf ./dist/ && cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "repository": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/danielsolartech/portfolio#readme",
   "dependencies": {
+    "husky": "^4.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
