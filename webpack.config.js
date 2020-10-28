@@ -26,7 +26,7 @@ module.exports = {
   output: {
     filename: `[name].${isDevelopment ? '[hash]' : 'min'}.js`,
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: './',
   },
   module: {
     rules: [
@@ -86,7 +86,7 @@ module.exports = {
     host: process.env.HOST || '0.0.0.0',
     port: process.env.PORT || 8000,
     historyApiFallback: true,
-    publicPath: '/',
+    publicPath: './',
     inline: true,
     open: true,
     hot: true,

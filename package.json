@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf ./dist/ && cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "precommit": "npm run build && rm -rf ./docs/ && mv ./dist/ ./docs/"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/danielsolartech/portfolio/issues"
   },
-  "homepage": "https://github.com/danielsolartech/portfolio#readme",
+  "homepage": "https://danielsolartech.github.io/portfolio",
   "dependencies": {
     "husky": "^4.3.0",
     "react": "^16.13.1",
@@ -37,6 +38,7 @@
     "css-loader": "^4.3.0",
     "dotenv": "^8.2.0",
     "file-loader": "^6.1.0",
+    "gh-pages": "^3.1.0",
     "html-loader": "^1.3.0",
     "html-webpack-plugin": "^4.4.1",
     "node-sass": "^4.14.1",
