@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielsolartech/portfolio.git"
+    "url": "git+https://github.com/danielsolartech/danielsolartech.github.io.git"
   },
   "keywords": [
     "portfolio"
@@ -19,9 +19,9 @@
   "author": "Daniel Solarte Chaverra",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielsolartech/portfolio/issues"
+    "url": "https://github.com/danielsolartech/danielsolartech.github.io/issues"
   },
-  "homepage": "https://danielsolartech.github.io/portfolio",
+  "homepage": "https://danielsolartech.github.io/",
   "dependencies": {
     "husky": "^4.3.0",
     "react": "^16.13.1",
