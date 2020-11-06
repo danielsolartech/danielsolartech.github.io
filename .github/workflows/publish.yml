@@ -1,0 +1,39 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - refs/tags/*
+
+jobs:
+  build:
+    name: Publish using NodeJS v14.x
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Node.JS v${{ matrix.version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.version }}
+
+      - uses: actions/checkout@v2
+
+      - name: Log versions
+        run: |
+          node -v
+          npm -v
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body_path: ./CHANGELOG.md
+          draft: true
+
+      - name: Publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy
