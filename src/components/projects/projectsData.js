@@ -9,23 +9,6 @@
 
 const projects = [
   {
-    image: require('../../assets/projects/vscode_sflynlang.png').default,
-    category: 'Back-End',
-    name: 'Sflynlang Extension for VS Code',
-    description: 'Official extension for Visual Studio Code.',
-    date: 'October of 2020',
-    links: {
-      GitHub: 'https://github.com/sflynlang/vscode-sflynlang',
-      Marketplace: 'https://marketplace.visualstudio.com/items?itemName=sflynlang.sflynlang',
-    },
-    tags: [
-      'VS Code',
-      'Extension',
-      'JavaScript',
-      'Sflynlang',
-    ],
-  },
-  {
     category: 'Back-End',
     name: 'Discord Bot (nhcarrigan)',
     description: 'I made a refactor to the Discord bot of nhcarrigan.',
@@ -79,41 +62,6 @@ const projects = [
       'CSS3',
       'HTML5',
       'JavaScript',
-    ],
-  },
-  {
-    image: require('../../assets/projects/sflynlang_icon.png').default,
-    category: 'Back-End',
-    name: 'Sflynlang Discord Bot',
-    description: 'Bot for the Official Discord Server of Sflynlang.<br><br>- Make suggestions.<br>- Welcomes messages.',
-    date: 'September of 2020',
-    links: {
-      GitHub: 'https://github.com/sflynlang/sflynlang-bot',
-    },
-    tags: [
-      'BackEnd',
-      'NodeJS',
-      'JavaScript',
-      'TypeScript',
-      'DiscordJS',
-    ],
-  },
-  {
-    image: require('../../assets/projects/sflynlang_code.png').default,
-    category: 'Back-End',
-    name: 'Sflynlang Compiler',
-    description: 'Compiler for the Sflynlang programming language.',
-    date: 'August of 2020',
-    links: {
-      GitHub: 'https://github.com/sflynlang/sflynlang-compiler',
-    },
-    tags: [
-      'BackEnd',
-      'Rust',
-      'Organization',
-      'Programming Language',
-      'Documentation',
-      'Compiler',
     ],
   },
   {
