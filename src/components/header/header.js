@@ -8,10 +8,12 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import './header.scss';
 
 const Header = ({ getObserver }) => {
+  const location = useLocation();
+  const history = useHistory();
   const [isActive, setActive] = React.useState(true);
   const [isChanging, setChanging] = React.useState(false);
   const [currentPage, setCurrentPage] = React.useState('about-me');
@@ -20,9 +22,9 @@ const Header = ({ getObserver }) => {
   const [lastScroll, setLastScroll] = React.useState(window.scrollY);
   const [isActiveMobile, setActiveMobile] = React.useState(false);
 
-  const pages = document.location.pathname.split('/').slice(1);
+  const pages = location.pathname.split('/').slice(2);
 
-  if (pages[0].length && currentPage != pages[0] && !firstEntry) {
+  if (pages[0] && pages[0].length && currentPage !== pages[0] && !firstEntry) {
     setCurrentPage(pages[0]);
     setFirstEntry(true);
   }
@@ -53,7 +55,7 @@ const Header = ({ getObserver }) => {
           setCurrentPage(entryPage);
           setCurrentEntry(entryPage);
 
-          history.pushState(null, document.title, `/${entryPage}`);
+          history.replace(`/#/${entryPage}`);
 
           setChanging(false);
         }
@@ -84,7 +86,7 @@ const Header = ({ getObserver }) => {
     if (currentEntry !== currentPage && !isChanging) {
       scrollToPage(currentPage);
     }
-  }, [currentEntry, currentPage]);
+  }, [currentEntry, currentPage, isChanging]);
 
   function changePage(page) {
     setCurrentPage(page);
@@ -106,16 +108,16 @@ const Header = ({ getObserver }) => {
           </svg>
         </button>
         <ul className={`header__right--navigator ${isActiveMobile ? 'header__right--navigator--active' : ''}`}>
-          <li className={isPage('about-me')}><Link to="/about-me" alt="About me section" onClick={() => changePage('about-me')}>
+          <li className={isPage('about-me')}><Link to="/#/about-me" alt="About me section" onClick={() => changePage('about-me')}>
             About me
           </Link></li>
-          <li className={isPage('projects')}><Link to="/projects" alt="My projects section" onClick={() => changePage('projects')}>
+          <li className={isPage('projects')}><Link to="/#/projects" alt="My projects section" onClick={() => changePage('projects')}>
             Projects
           </Link></li>
-          <li className={isPage('skills')}><Link to="/skills" alt="My skills section" onClick={() => changePage('skills')}>
+          <li className={isPage('skills')}><Link to="/#/skills" alt="My skills section" onClick={() => changePage('skills')}>
             Skills
           </Link></li>
-          <li className={isPage('contact')}><Link to="/contact" alt="My contact section" onClick={() => changePage('contact')}>
+          <li className={isPage('contact')}><Link to="/#/contact" alt="My contact section" onClick={() => changePage('contact')}>
             Contact
           </Link></li>
         </ul>

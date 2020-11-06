@@ -20,7 +20,7 @@ const ProjectCard = ({ image, category, name, description, date, onClick }) => (
     <div className="project-card__info">
       <button className="project-card__info--category">{category}</button>
       <div className="project-card__info--name">{name}</div>
-      <div className="project-card__info--description">{description}</div>
+      <div className="project-card__info--description" dangerouslySetInnerHTML={{ __html: description }} />
       <button className="project-card__info--view-more" onClick={onClick}>
         View project
       </button>

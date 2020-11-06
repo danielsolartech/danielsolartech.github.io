@@ -22,6 +22,7 @@ const Skills = ({ observer }) => {
     if (element) {
       observer.observe(element);
     }
+  // eslint-disable-next-line
   }, [element]);
 
   return (

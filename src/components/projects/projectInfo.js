@@ -25,7 +25,7 @@ const ProjectInfo = ({ image, category, name, description, date, links, tags, on
             <div className="project-info__content--info__extra--date">{date}</div>
             <div className="project-info__content--info__extra--category">{category}</div>
           </div>
-          <div className="project-info__content--info__description">{description}</div>
+          <div className="project-info__content--info__description" dangerouslySetInnerHTML={{ __html: description }} />
           {(tags && tags.length > 0) && <div className="project-info__content--info__tags">
             <ul>
               {tags.map((tag, i) => (

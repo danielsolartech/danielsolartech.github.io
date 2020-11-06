@@ -9,21 +9,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 import Router from './router';
+import reportWebVitals from './reportWebVitals';
 import './general.scss';
 
-const render = () => {
-  ReactDOM.render(
-    <AppContainer>
-      <Router />
-    </AppContainer>,
-    document.getElementById('web'),
-  );
-};
+ReactDOM.render(
+  <React.StrictMode>
+    <Router />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-render();
-
-if (module.hot) {
-  module.hot.accept('./router', render);
-}
+reportWebVitals();

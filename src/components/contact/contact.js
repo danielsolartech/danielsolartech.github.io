@@ -17,6 +17,7 @@ const Contact = ({ observer }) => {
     if (element) {
       observer.observe(element);
     }
+  // eslint-disable-next-line
   }, [element]);
 
   return(

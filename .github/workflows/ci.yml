@@ -1,0 +1,71 @@
+name: Node.JS CI
+
+on:
+  pull_request:
+    paths:
+      - "**.ts"
+      - "package-lock.json"
+      - "package.json"
+  push:
+    branches:
+      - main
+    paths:
+      - "**.ts"
+      - "package-lock.json"
+      - "package.json"
+
+jobs:
+  build:
+    name: ${{ matrix.os }} with Node.JS v${{ matrix.version }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+        version:
+          - 12.x
+          - 14.x
+
+    steps:
+      - name: Install Node.JS v${{ matrix.version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.version }}
+
+      - uses: actions/checkout@v2
+
+      - name: Log versions
+        run: |
+          node -v
+          npm -v
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build source
+        run: npm run build --if-present
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: |
+          github.repository == 'danielsolartech/danielsolartech.github.io' &&
+          startsWith(github.ref, 'refs/tags/v')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          body_path: ./CHANGELOG.md
+          draft: true
+
+      - name: Publish
+        if: |
+          github.repository == 'danielsolartech/danielsolartech.github.io' &&
+          startsWith(github.ref, 'refs/tags/v')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy

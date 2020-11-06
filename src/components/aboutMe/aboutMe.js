@@ -17,6 +17,7 @@ const AboutMe = ({ observer }) => {
     if (element) {
       observer.observe(element);
     }
+  // eslint-disable-next-line
   }, [element]);
 
   return (
@@ -33,7 +34,7 @@ const AboutMe = ({ observer }) => {
       <div className="aboutMe__right">
         <h1>About me</h1>
         <p>
-          Multiplatform software developer with 2 years of experience in backend and frontend process with JavaScript,
+          Cross-platform software developer with 3 years of experience in backend and frontend process with JavaScript,
           TypeScript, Rust, NodeJS, ReactJS, Ionic and SASS.
         </p>
         <p>

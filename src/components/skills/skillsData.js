@@ -7,131 +7,151 @@
  * @format
  */
 
-export default [
+const skills = [
+  {
+    name: 'NeoVim',
+    image: require('../../assets/skills/nvim.png').default,
+    description: 'Code editor.',
+    year: 2020,
+  },
   {
     name: 'Rustlang',
-    image: require('../../../public/skills/rust.png').default,
+    image: require('../../assets/skills/rust.png').default,
     description: 'Traits, structs, functions and pointers.',
     year: 2020,
   },
   {
     name: 'Golang',
-    image: require('../../../public/skills/go.png').default,
+    image: require('../../assets/skills/go.png').default,
     description: 'Structs, pointers, slices and maps.',
     year: 2020,
   },
   {
     name: 'Heroku',
-    image: require('../../../public/skills/heroku.png').default,
+    image: require('../../assets/skills/heroku.png').default,
     description: 'Deploying Discord bots and websites.',
     year: 2020,
   },
   {
     name: 'Figma',
-    image: require('../../../public/skills/figma.png').default,
+    image: require('../../assets/skills/figma.png').default,
     description: 'Apps design and plugins.',
     year: 2020,
   },
   {
     name: 'Deno',
-    image: require('../../../public/skills/deno.png').default,
+    image: require('../../assets/skills/deno.png').default,
     description: 'Deno concepts.',
     year: 2020,
   },
   {
     name: 'Ionic',
-    image: require('../../../public/skills/ionic.png').default,
+    image: require('../../assets/skills/ionic.png').default,
     description: 'Hibrid mobile apps like a music player.',
     year: 2020,
   },
   {
+    name: 'NGinx',
+    image: require('../../assets/skills/nginx.png').default,
+    description: 'Load balancer, socket connections.',
+    year: 2020,
+  },
+  {
     name: 'SocketIO',
-    image: require('../../../public/skills/socketio.svg').default,
+    image: require('../../assets/skills/socketio.svg').default,
     description: 'Web apps in real time like a chat.',
     year: 2020,
   },
   {
     name: 'MongoDB',
-    image: require('../../../public/skills/mongodb.png').default,
+    image: require('../../assets/skills/mongodb.png').default,
     description: 'Documents and virtual methods.',
     year: 2019,
   },
   {
+    name: 'Linux',
+    image: require('../../assets/skills/linux.png').default,
+    description: 'Arch Linux, Ubuntu.',
+    year: 2019,
+  },
+  {
     name: 'TypeScript',
-    image: require('../../../public/skills/typescript.svg').default,
+    image: require('../../assets/skills/typescript.svg').default,
     description: 'Classes, generics, interfaces and types.',
     year: 2019,
   },
   {
     name: 'SASS',
-    image: require('../../../public/skills/sass.png').default,
+    image: require('../../assets/skills/sass.png').default,
     description: 'Mixins, variables, includes and imports.',
     year: 2019
   },
   {
     name: 'Redux',
-    image: require('../../../public/skills/redux.png').default,
+    image: require('../../assets/skills/redux.png').default,
     description: 'Global states with React.',
     year: 2019,
   },
   {
     name: 'ReactJS',
-    image: require('../../../public/skills/reactjs.png').default,
+    image: require('../../assets/skills/reactjs.png').default,
     description: 'Hooks, components, states and routes.',
     year: 2019,
   },
   {
     name: 'NodeJS',
-    image: require('../../../public/skills/nodejs.png').default,
+    image: require('../../assets/skills/nodejs.png').default,
     description: 'DiscordJS, ExpressJS, Jest and Mocha.',
     year: 2019,
   },
   {
     name: 'Visual Studio Code',
-    image: require('../../../public/skills/vscode.png').default,
+    image: require('../../assets/skills/vscode.png').default,
     description: 'Code editor.',
     year: 2019,
   },
   {
     name: 'Git',
-    image: require('../../../public/skills/git.png').default,
+    image: require('../../assets/skills/git.png').default,
     description: 'GitHub Actions, pull requests, brahches, pushes and commits.',
     year: 2019,
   },
   {
     name: 'MySQL',
-    image: require('../../../public/skills/mysql.png').default,
+    image: require('../../assets/skills/mysql.png').default,
     description: 'Relational tables, procedures and constraints.',
     year: 2018,
   },
   {
     name: 'Bootstrap',
-    image: require('../../../public/skills/bootstrap.png').default,
+    image: require('../../assets/skills/bootstrap.png').default,
     description: 'Modals, layout, toasts, navbar, carousel and forms.',
     year: 2018,
   },
   {
     name: 'jQuery',
-    image: require('../../../public/skills/jquery.png').default,
+    image: require('../../assets/skills/jquery.png').default,
     description: 'DOM manipulation.',
     year: 2018,
   },
   {
     name: 'JavaScript',
-    image: require('../../../public/skills/javascript.png').default,
+    image: require('../../assets/skills/javascript.png').default,
     description: 'Local Storage, cookies, PWA, DOM, Intersection Observer and ES6.',
     year: 2018,
   },
   {
     name: 'CSS3',
-    image: require('../../../public/skills/css3.png').default,
+    image: require('../../assets/skills/css3.png').default,
     description: 'Animations, responsive design and basic elements.',
     year: 2017,
   },
   {
     name: 'HTML5',
-    image: require('../../../public/skills/html5.png').default,
+    image: require('../../assets/skills/html5.png').default,
     description: 'Canvas API, SEO and basic elements.',
     year: 2017,
   },
 ];
+
+export default skills;
