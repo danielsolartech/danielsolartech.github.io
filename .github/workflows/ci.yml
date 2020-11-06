@@ -2,17 +2,9 @@ name: Node.JS CI
 
 on:
   pull_request:
-    paths:
-      - "**.ts"
-      - "package-lock.json"
-      - "package.json"
   push:
     branches:
       - main
-    paths:
-      - "**.ts"
-      - "package-lock.json"
-      - "package.json"
 
 jobs:
   build:
