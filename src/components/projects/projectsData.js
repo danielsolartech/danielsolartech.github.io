@@ -7,9 +7,9 @@
  * @format
  */
 
-export default [
+const projects = [
   {
-    image: require('../../../public/projects/vscode_sflynlang.png').default,
+    image: require('../../assets/projects/vscode_sflynlang.png').default,
     category: 'Back-End',
     name: 'Sflynlang Extension for VS Code',
     description: 'Official extension for Visual Studio Code.',
@@ -63,13 +63,13 @@ export default [
     ],
   },
   {
-    image: require('../../../public/projects/portfolio.png').default,
+    image: require('../../assets/projects/portfolio.png').default,
     category: 'Front-End',
     name: 'Portfolio',
     description: 'Personal portfolio.',
     date: 'September of 2020',
     links: {
-      GitHub: 'https://github.com/danielsolartech/portfolio'
+      GitHub: 'https://github.com/danielsolartech/danielsolartech.github.io'
     },
     tags: [
       'FrontEnd',
@@ -82,10 +82,10 @@ export default [
     ],
   },
   {
-    image: require('../../../public/projects/sflynlang_icon.png').default,
+    image: require('../../assets/projects/sflynlang_icon.png').default,
     category: 'Back-End',
     name: 'Sflynlang Discord Bot',
-    description: 'Bot for the Official Discord Server of Sflynlang.\r\n\r\n- Make suggestions.\r\n- Welcomes messages.',
+    description: 'Bot for the Official Discord Server of Sflynlang.<br><br>- Make suggestions.<br>- Welcomes messages.',
     date: 'September of 2020',
     links: {
       GitHub: 'https://github.com/sflynlang/sflynlang-bot',
@@ -99,7 +99,7 @@ export default [
     ],
   },
   {
-    image: require('../../../public/projects/sflynlang_code.png').default,
+    image: require('../../assets/projects/sflynlang_code.png').default,
     category: 'Back-End',
     name: 'Sflynlang Compiler',
     description: 'Compiler for the Sflynlang programming language.',
@@ -137,7 +137,7 @@ export default [
     ],
   },
   {
-    image: require('../../../public/projects/rust_notes_cli.png').default,
+    image: require('../../assets/projects/rust_notes_cli.png').default,
     category: 'Back-End',
     name: 'Rust Notes CLI',
     description: 'Manage notes in your computer using the console.',
@@ -173,7 +173,7 @@ export default [
     ],
   },
   {
-    image: require('../../../public/projects/nextmusic_concept.png').default,
+    image: require('../../assets/projects/nextmusic_concept.png').default,
     category: 'Design',
     name: 'NextMusic Concept',
     description: 'Concept of NextMusic APP.',
@@ -184,7 +184,7 @@ export default [
     ],
   },
   {
-    image: require('../../../public/projects/fazt_community_landing_page.jpeg').default,
+    image: require('../../assets/projects/fazt_community_landing_page.jpeg').default,
     category: 'Design',
     name: 'Fazt Community Landing Page Design',
     description: 'Temporary landing page for faztcommunity.dev.',
@@ -219,7 +219,7 @@ export default [
   {
     category: 'Fullstack',
     name: 'NextChat',
-    description: 'Messages social network.\r\n\r\n- You can send and receive messages.\r\n- Verify your account using your e-mail.\r\n- Send friend requests.',
+    description: 'Messages social network.<br><br>- You can send and receive messages.<br>- Verify your account using your e-mail.<br>- Send friend requests.',
     date: 'June of 2020',
     links: {
       'GitHub (API)': 'https://github.com/danielsolartech/nextchat-api',
@@ -260,3 +260,5 @@ export default [
     ],
   },
 ];
+
+export default projects;

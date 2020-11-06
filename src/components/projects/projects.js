@@ -23,11 +23,12 @@ const Projects = ({ observer }) => {
     if (element) {
       observer.observe(element);
     }
+  // eslint-disable-next-line
   }, [element]);
 
   React.useEffect(() => {
     if (projectActive >= projectsData.length) {
-      projectActive = -1;
+      setProjectActive(-1);
     }
 
     document.body.style.overflow = projectActive >= 0 ? 'hidden' : 'auto';
