@@ -9,6 +9,12 @@
 
 const skills = [
   {
+    name: 'Open Street Map',
+    image: require('../../assets/skills/openstreetmap.png').default,
+    description: 'API with Node.JS, Open Layers and Deck.gl.',
+    year: 2020,
+  },
+  {
     name: 'NeoVim',
     image: require('../../assets/skills/nvim.png').default,
     description: 'Code editor.',

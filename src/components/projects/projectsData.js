@@ -9,31 +9,51 @@
 
 const projects = [
   {
-    category: 'Back-End',
-    name: 'Discord Bot (nhcarrigan)',
-    description: 'I made a refactor to the Discord bot of nhcarrigan.',
-    date: 'October of 2020',
+    image: require('../../assets/projects/github_presente_meeting.png').default,
+    category: 'Meetings',
+    name: 'GitHub Presente (Spanish)',
+    description: 'I talk about "Why is Rustlang getting a bigger community?" in Spanish.',
+    date: '17 of November of 2020',
     links: {
-      'GitHub (Bot)': 'https://github.com/nhcarrigan/discord-bot',
-      'GitHub (Documentation)': 'https://github.com/nhcarriggan/discord-bot-documentation',
+      YouTube: 'https://youtu.be/l8bLDR89qHA?t=4893',
+    },
+    tags: [
+      'RustLang',
+      'Meeting',
+    ],
+  },
+  {
+    image: require('../../assets/projects/amva_web.png').default,
+    category: 'FullStack',
+    name: 'A.M.V.A. App (API & Web)',
+    description: 'I add the animations of the webpage using react-spring and the views styles.',
+    date: 'November of 2020',
+    links: {
+      GitHub: 'https://github.com/danielsolartech/amva-app',
+      Web: 'https://danielsolartech.github.io/amva-app',
     },
     tags: [
       'BackEnd',
       'NodeJS',
       'JavaScript',
       'TypeScript',
-      'DiscordJS',
       'Contribution',
-      'Refactor',
+      'ReactJS',
+      'OpenSourceMap',
+      'DeckGL',
+      'OpenSourceControl',
+      'SuperCollider'
     ],
   },
   {
+    image: require('../../assets/projects/becca_lyria.png').default,
     category: 'Back-End',
-    name: 'Discord Bot (LemonCod3)',
-    description: 'I made a refactor to the Discord bot of LemonCod3.',
+    name: 'Becca-Lyria (Discord Bot)',
+    description: 'I make a refactor to the Discord bot of nhcarrigan.',
     date: 'October of 2020',
     links: {
-      GitHub: 'https://github.com/LemonCod3/bot-discord'
+      'GitHub (Bot)': 'https://github.com/nhcarrigan/Becca-Lyria',
+      'GitHub (Documentation)': 'https://github.com/nhcarriggan/discord-bot-documentation',
     },
     tags: [
       'BackEnd',
@@ -65,6 +85,23 @@ const projects = [
     ],
   },
   {
+    image: require('../../assets/projects/sflynlang_icon.png').default,
+    category: 'Back-End',
+    name: 'Sflynlang',
+    description: 'High-Level programming language, the primary interpreter is written in Rustlang.',
+    links: {
+      'GitHub (Interpreter)': 'https://github.com/sflynlang/sflynlang-interpreter',
+    },
+    tags: [
+      'BackEnd',
+      'RustLang',
+      'Interpreter',
+      'Typechecker',
+      'Parser',
+    ],
+  },
+  {
+    image: require('../../assets/projects/spooked_cms.png').default,
     category: 'Back-End',
     name: 'SpookedCMS',
     description: 'CMS for NodeJS with Themes and Plugins.',
@@ -148,6 +185,7 @@ const projects = [
     ],
   },
   {
+    image: require('../../assets/projects/faztbot.png').default,
     category: 'Back-End',
     name: 'Fazt-bot',
     description: 'Multipurpose bot for Fazt Tech\'s Discord server.',
@@ -165,6 +203,7 @@ const projects = [
     ],
   },
   {
+    image: require('../../assets/projects/nextchat_profile.png').default,
     category: 'Fullstack',
     name: 'NextChat',
     description: 'Messages social network.<br><br>- You can send and receive messages.<br>- Verify your account using your e-mail.<br>- Send friend requests.',
@@ -187,24 +226,6 @@ const projects = [
       'Redux',
       'Webpack',
       'Babel',
-    ],
-  },
-  {
-    category: 'Back-End',
-    name: 'Next-database',
-    description: 'NodeJS ORM for MySQL.',
-    date: 'April of 2020',
-    links: {
-      GitHub: 'https://github.com/danielsolartech/next-database',
-      NPM: 'https://www.npmjs.com/package/next-database',
-    },
-    tags: [
-      'BackEnd',
-      'NodeJS',
-      'JavaScript',
-      'TypeScript',
-      'MySQL',
-      'ORM',
     ],
   },
 ];
