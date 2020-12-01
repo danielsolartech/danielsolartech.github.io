@@ -53,7 +53,7 @@ const projects = [
     date: 'October of 2020',
     links: {
       'GitHub (Bot)': 'https://github.com/nhcarrigan/Becca-Lyria',
-      'GitHub (Documentation)': 'https://github.com/nhcarriggan/discord-bot-documentation',
+      'GitHub (Documentation)': 'https://github.com/nhcarrigan/Becca-Lyria-documentation',
     },
     tags: [
       'BackEnd',
