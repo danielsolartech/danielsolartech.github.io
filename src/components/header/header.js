@@ -11,7 +11,7 @@ import React from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import './header.scss';
 
-const Header = ({ getObserver }) => {
+const Header = ({ getObserver, onThemeChange }) => {
   const location = useLocation();
   const history = useHistory();
   const [isActive, setActive] = React.useState(true);
@@ -26,6 +26,20 @@ const Header = ({ getObserver }) => {
 
   const pages = location.pathname.split('/').slice(2);
 
+  function setThemeElement(el) {
+    if (!el) {
+      return;
+    }
+  
+    el.setAttribute('data-theme', theme);
+  
+    if (el.children.length) {
+      for (let i = 0; i < el.children.length; i++) {
+        setThemeElement(el.children[i]);
+      }
+    }
+  }
+
   React.useEffect(() => {
     if (themeLoaded) {
       const themeSaved = localStorage.getItem('theme');
@@ -35,23 +49,10 @@ const Header = ({ getObserver }) => {
         localStorage.setItem('theme', theme);
       }
 
-      function setThemeElement(el) {
-        if (!el) {
-          return;
-        }
-
-        el.setAttribute('data-theme', theme);
-
-        if (el.children.length) {
-          for (let i = 0; i < el.children.length; i++) {
-            setThemeElement(el.children[i]);
-          }
-        }
-      }
-
       setThemeElement(document.getElementById('root'));
 
       document.body.setAttribute('data-theme', theme);
+      onThemeChange(theme);
     }
   }, [theme, themeLoaded]);
 

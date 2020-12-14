@@ -13,6 +13,7 @@ import Header from './components/header/header';
 import Home from './pages/home';
 
 const Router = () => {
+  const [theme, setTheme] = React.useState('light');
   let currentObserver = null;
 
   return (
@@ -21,10 +22,11 @@ const Router = () => {
         getObserver={(observer) => {
           currentObserver = observer;
         }}
+        onThemeChange={(theme) => setTheme(theme)}
       />
 
       <Switch>
-        <Route path="*" render={() => <Home observer={currentObserver} />} />
+        <Route path="*" render={() => <Home observer={currentObserver} theme={theme} />} />
       </Switch>
     </BrowserRouter>
   );

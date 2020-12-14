@@ -13,7 +13,7 @@ import ProjectCard from './projectCard';
 import ProjectInfo from './projectInfo';
 import './projects.scss';
 
-const Projects = ({ observer }) => {
+const Projects = ({ observer, theme }) => {
   const [element, setElement] = React.useState(null);
   const [page, setPage] = React.useState(1);
   const [dataActive, setDataActive] = React.useState(projectsData);
@@ -48,7 +48,7 @@ const Projects = ({ observer }) => {
   return (
     <>
       {(projectActive >= 0 && projectActive < projectsData.length) && (
-        <ProjectInfo {...projectsData[projectActive]} onClick={() => setProjectActive(-1)} />
+        <ProjectInfo {...projectsData[projectActive]} onClick={() => setProjectActive(-1)} theme={theme} />
       )}
       <section className="projects" ref={setElement} data-page="projects">
         <h1 className="projects__title">Projects</h1>
