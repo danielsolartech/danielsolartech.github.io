@@ -34,7 +34,7 @@ const AboutMe = ({ observer }) => {
       <div className="aboutMe__right">
         <h1>About me</h1>
         <p>
-          Cross-platform software developer with 3 years of experience in backend and frontend process with JavaScript,
+          Cross-platform software developer with experience in backend and frontend process with JavaScript,
           TypeScript, Rust, NodeJS, ReactJS, Ionic and SASS.
         </p>
         <p>

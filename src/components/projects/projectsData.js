@@ -30,7 +30,7 @@ const projects = [
     date: 'November of 2020',
     links: {
       GitHub: 'https://github.com/danielsolartech/amva-app',
-      Web: 'https://danielsolartech.github.io/amva-app',
+      Web: 'https:/amva40.github.io',
     },
     tags: [
       'BackEnd',
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/becca_lyria.png').default,
-    category: 'Back-End',
+    category: 'BackEnd',
     name: 'Becca-Lyria (Discord Bot)',
     description: 'I make a refactor to the Discord bot of nhcarrigan.',
     date: 'October of 2020',
@@ -67,7 +67,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/portfolio.png').default,
-    category: 'Front-End',
+    category: 'FrontEnd',
     name: 'Portfolio',
     description: 'Personal portfolio.',
     date: 'September of 2020',
@@ -86,9 +86,10 @@ const projects = [
   },
   {
     image: require('../../assets/projects/sflynlang_icon.png').default,
-    category: 'Back-End',
+    category: 'BackEnd',
     name: 'Sflynlang',
     description: 'High-Level programming language, the primary interpreter is written in Rustlang.',
+    date: 'August of 2020',
     links: {
       'GitHub (Interpreter)': 'https://github.com/sflynlang/sflynlang-interpreter',
     },
@@ -102,7 +103,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/spooked_cms.png').default,
-    category: 'Back-End',
+    category: 'BackEnd',
     name: 'SpookedCMS',
     description: 'CMS for NodeJS with Themes and Plugins.',
     date: 'August of 2020',
@@ -123,7 +124,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/rust_notes_cli.png').default,
-    category: 'Back-End',
+    category: 'BackEnd',
     name: 'Rust Notes CLI',
     description: 'Manage notes in your computer using the console.',
     date: 'August of 2020',
@@ -186,7 +187,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/faztbot.png').default,
-    category: 'Back-End',
+    category: 'BackEnd',
     name: 'Fazt-bot',
     description: 'Multipurpose bot for Fazt Tech\'s Discord server.',
     date: 'June of 2020',
@@ -204,7 +205,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/nextchat_profile.png').default,
-    category: 'Fullstack',
+    category: 'FullStack',
     name: 'NextChat',
     description: 'Messages social network.<br><br>- You can send and receive messages.<br>- Verify your account using your e-mail.<br>- Send friend requests.',
     date: 'June of 2020',

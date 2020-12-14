@@ -1,6 +1,8 @@
 @import '../../variables.scss';
 
 .project-info {
+  $self: &;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -40,6 +42,7 @@
     justify-content: center;
     box-shadow: 0 0 2px 0 rgba(black, .34);
     max-width: 90%;
+    transition: .4s background-color ease-in-out;
 
     @media (max-width: 1199.98px) {
       background-color: silver;
@@ -48,6 +51,10 @@
     @media (max-width: 575.98px) {
       width: 90%;
       display: block;
+    }
+
+    &[data-theme="dark"] {
+      background-color: $backgroundDark;
     }
 
     &--close {
@@ -63,6 +70,7 @@
       padding-right: .5rem;
       cursor: pointer;
       transition: .4s color ease-in-out;
+      color: inherit;
 
       &:hover {
         color: #f44336;
@@ -103,7 +111,6 @@
       @media (max-width: 1199.98px) {
         max-width: calc(100% - 360px);
         min-height: 240px;
-        background-color: white;
       }
 
       @media (max-width: 991.98px) {
@@ -118,9 +125,14 @@
       }
 
       &__title {
-        color: $secondaryLight;
+        color: $primaryLight;
         font-weight: 400;
         letter-spacing: .02em;
+        transition: .4s color ease-in-out;
+
+        &[data-theme="dark"] {
+          color: $primaryDark;
+        }
 
         @media (max-width: 575.98px) {
           font-size: 1.5rem;
@@ -155,16 +167,14 @@
         }
       }
       &__tags, &__links {
+        border-top: 1px dashed silver;
         margin-top: .75rem;
+        transition: .4s border-color ease-in-out;
 
-        & > h1 {
-          font: {
-            weight: 400;
-            size: 1.2rem;
-          };
-          letter-spacing: .02em;
-          margin-bottom: .25rem;
+        &[data-theme="dark"] {
+          border-color: $colorDark;
         }
+
         & > ul {
           list-style: none;
           display: flex;
@@ -174,16 +184,20 @@
         }
       }
       &__tags {
-        border-top: 1px dashed silver;
         padding-top: .75rem;
 
         & > ul > li {
-          color: $secondaryLight;
+          color: $primaryLight;
           padding: .25rem;
           font: {
             weight: 400;
             size: .85em;
           };
+          transition: .4s color ease-in-out;
+
+          &[data-theme="dark"] {
+            color: $primaryDark;
+          }
 
           &::before {
             content: "#";
@@ -192,7 +206,6 @@
         }
       }
       &__links {
-        border-top: 1px dashed silver;
         padding-top: 1rem;
 
         & > ul > li {
@@ -200,7 +213,7 @@
           padding-bottom: .25rem;
 
           & > a {
-            background-color: $secondaryLight;
+            background-color: $primaryLight;
             color: white;
             padding: .25rem .75rem;
             border-radius: 2px;
@@ -213,8 +226,16 @@
             display: flex;
             align-items: center;
 
+            &[data-theme="dark"] {
+              background-color: $primaryDark;
+
+              &:hover {
+                background-color: darken($primaryDark, 5);
+              }
+            }
+
             &:hover {
-              background-color: darken($secondaryLight, 5);
+              background-color: darken($primaryLight, 5);
             }
             & > svg {
               width: 1em;

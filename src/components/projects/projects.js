@@ -16,7 +16,10 @@ import './projects.scss';
 const Projects = ({ observer }) => {
   const [element, setElement] = React.useState(null);
   const [page, setPage] = React.useState(1);
+  const [dataActive, setDataActive] = React.useState(projectsData);
+  const [projectsFilter, setProjectsFilter] = React.useState({ category: 'all' });
   const [projectActive, setProjectActive] = React.useState(-1);
+
   const projectsPerPage = 6;
 
   React.useEffect(() => {
@@ -25,6 +28,14 @@ const Projects = ({ observer }) => {
     }
   // eslint-disable-next-line
   }, [element]);
+
+  React.useEffect(() => {
+    if (projectsFilter.category.toLowerCase() === 'all') {
+      setDataActive(projectsData);
+    } else {
+      setDataActive(projectsData.filter((project) => project.category.toLowerCase() === projectsFilter.category.toLowerCase()));
+    }
+  }, [projectsFilter]);
 
   React.useEffect(() => {
     if (projectActive >= projectsData.length) {
@@ -41,12 +52,31 @@ const Projects = ({ observer }) => {
       )}
       <section className="projects" ref={setElement} data-page="projects">
         <h1 className="projects__title">Projects</h1>
+        <div className="projects__filter">
+          <div className="projects__filter--select">
+            <span>Category</span>
+            <select defaultValue={projectsFilter.category.toLowerCase()} onChange={(e) => {
+              setProjectsFilter({
+                ...projectsFilter,
+                category: e.target.options[e.target.selectedIndex].value,
+              });
+            }}>
+              <option value="all">All</option>
+              <option value="meetings">Meetings</option>
+              <option value="design">Design</option>
+              <option value="fullstack">FullStack</option>
+              <option value="frontend">FrontEnd</option>
+              <option value="backend">BackEnd</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </div>
+        </div>
         <div className="projects__grid">
-          {projectsData.slice(0, projectsPerPage * page).map((project, i) => (
+          {dataActive.slice(0, projectsPerPage * page).map((project, i) => (
             <ProjectCard {...project} key={`project_${i + 1}`} onClick={() => setProjectActive(i)} />
           ))}
         </div>
-        {((projectsPerPage * page + 1) <= projectsData.length) && <button className="projects__more" onClick={() => {
+        {((projectsPerPage * page + 1) <= dataActive.length) && <button className="projects__more" onClick={() => {
           setPage(page + 1);
         }}>Load more projects</button>}
       </section>

@@ -36,7 +36,7 @@
     justify-content: center;
 
     &--category {
-      color: $secondaryLight;
+      color: $primaryLight;
       border: none;
       background-color: transparent;
       font: {
@@ -46,6 +46,11 @@
       letter-spacing: .02em;
       cursor: pointer;
       text-transform: uppercase;
+      transition: .4s color ease-in-out;
+
+      &[data-theme="dark"] {
+        color: $primaryDark;
+      }
     }
     &--name {
       font: {
@@ -63,7 +68,7 @@
     }
     &--view-more {
       border: 0;
-      background-color: $secondaryLight;
+      background-color: $primaryLight;
       color: white;
       font: {
         weight: 500;
@@ -73,6 +78,11 @@
       border-radius: 4px;
       cursor: pointer;
       margin-top: .75rem;
+      transition: .4s background-color ease-in-out;
+
+      &[data-theme="dark"] {
+        background-color: $primaryDark;
+      }
     }
   }
 }

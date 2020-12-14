@@ -3,7 +3,11 @@
 .skill-card {
   border: 1px dashed silver;
   border-radius: 4px;
+  transition: .4s border-color ease-in-out;
 
+  &[data-theme="dark"] {
+    border-color: $colorDark;
+  }
   &__header {
     display: flex;
     flex-flow: row wrap;
@@ -26,6 +30,7 @@
       &__name {
         font-weight: 400;
         letter-spacing: .02em;
+        transition: .4s color ease-in-out;
       }
       &__time {
         display: flex;
@@ -47,6 +52,11 @@
     border-top: 1px dashed silver;
     padding: .5rem;
     line-height: 1.5;
+    transition: .4s color ease-in-out;
+
+    &[data-theme="dark"] {
+      color: $colorDark;
+    }
 
     &:empty {
       display: none;

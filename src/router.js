@@ -17,9 +17,11 @@ const Router = () => {
 
   return (
     <BrowserRouter>
-      <Header getObserver={(observer) => {
-        currentObserver = observer;
-      }} />
+      <Header
+        getObserver={(observer) => {
+          currentObserver = observer;
+        }}
+      />
 
       <Switch>
         <Route path="*" render={() => <Home observer={currentObserver} />} />

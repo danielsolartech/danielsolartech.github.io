@@ -21,8 +21,39 @@ const Header = ({ getObserver }) => {
   const [firstEntry, setFirstEntry] = React.useState(false);
   const [lastScroll, setLastScroll] = React.useState(window.scrollY);
   const [isActiveMobile, setActiveMobile] = React.useState(false);
+  const [themeLoaded, setThemeLoaded] = React.useState(false);
+  const [theme, setTheme] = React.useState('light');
 
   const pages = location.pathname.split('/').slice(2);
+
+  React.useEffect(() => {
+    if (themeLoaded) {
+      const themeSaved = localStorage.getItem('theme');
+
+      if (themeSaved !== theme) {
+        localStorage.removeItem('theme');
+        localStorage.setItem('theme', theme);
+      }
+
+      function setThemeElement(el) {
+        if (!el) {
+          return;
+        }
+
+        el.setAttribute('data-theme', theme);
+
+        if (el.children.length) {
+          for (let i = 0; i < el.children.length; i++) {
+            setThemeElement(el.children[i]);
+          }
+        }
+      }
+
+      setThemeElement(document.getElementById('root'));
+
+      document.body.setAttribute('data-theme', theme);
+    }
+  }, [theme, themeLoaded]);
 
   if (pages[0] && pages[0].length && currentPage !== pages[0] && !firstEntry) {
     setCurrentPage(pages[0]);
@@ -36,6 +67,20 @@ const Header = ({ getObserver }) => {
 
     return '';
   }
+
+  window.onload = () => {
+    if (!themeLoaded) {
+      const themeSaved = localStorage.getItem('theme');
+
+      setThemeLoaded(true);
+
+      if (themeSaved.length > 0 && themeSaved !== theme) {
+        setTheme(themeSaved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches && theme !== 'dark' && themeSaved.length === 0) {
+        setTheme('dark');
+      }
+    }
+  };
 
   window.onscroll = () => {
     const currentScroll = window.scrollY;
@@ -120,6 +165,11 @@ const Header = ({ getObserver }) => {
           <li className={isPage('contact')}><Link to="/#/contact" alt="My contact section" onClick={() => changePage('contact')}>
             Contact
           </Link></li>
+          <div className="theme-switch">
+            <span>Light/Dark Mode</span>
+            <input type="checkbox" id="themeInput" checked={theme === 'dark'} onChange={(e) => setTheme(e.target.checked ? 'dark' : 'light')} />
+            <label htmlFor="themeInput"></label>
+          </div>
         </ul>
       </div>
     </header>
