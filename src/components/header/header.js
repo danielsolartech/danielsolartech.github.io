@@ -71,7 +71,7 @@ const Header = ({ getObserver, onThemeChange }) => {
 
   window.onload = () => {
     if (!themeLoaded) {
-      const themeSaved = localStorage.getItem('theme');
+      const themeSaved = localStorage.getItem('theme') || '';
 
       setThemeLoaded(true);
 

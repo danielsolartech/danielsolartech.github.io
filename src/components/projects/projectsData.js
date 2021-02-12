@@ -24,7 +24,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/amva_web.png').default,
-    category: 'FullStack',
+    category: 'FullStack - Contribution',
     name: 'A.M.V.A. App (API & Web)',
     description: 'I add the animations of the webpage using react-spring and the views styles.',
     date: 'November of 2020',
@@ -68,7 +68,7 @@ const projects = [
   {
     image: require('../../assets/projects/portfolio.png').default,
     category: 'FrontEnd',
-    name: 'Portfolio',
+    name: 'Portfolio V1',
     description: 'Personal portfolio.',
     date: 'September of 2020',
     links: {
@@ -187,7 +187,7 @@ const projects = [
   },
   {
     image: require('../../assets/projects/faztbot.png').default,
-    category: 'BackEnd',
+    category: 'BackEnd - Contribution',
     name: 'Fazt-bot',
     description: 'Multipurpose bot for Fazt Tech\'s Discord server.',
     date: 'June of 2020',
@@ -206,7 +206,7 @@ const projects = [
   {
     image: require('../../assets/projects/nextchat_profile.png').default,
     category: 'FullStack',
-    name: 'NextChat',
+    name: 'NextChat V1',
     description: 'Messages social network.<br><br>- You can send and receive messages.<br>- Verify your account using your e-mail.<br>- Send friend requests.',
     date: 'June of 2020',
     links: {

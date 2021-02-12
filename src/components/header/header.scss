@@ -81,6 +81,10 @@
         display: block;
       }
 
+      &[data-theme="dark"] {
+        color: $backgroundLight;
+      }
+
       & > svg {
         width: 1em;
         height: 1em;
@@ -98,7 +102,7 @@
         transition: .4s top ease-in, .4s background-color ease-in-out;
         position: absolute;
         left: 0;
-        top: -350%;
+        top: -500%;
         width: 100%;
         background-color: white;
         height: auto;

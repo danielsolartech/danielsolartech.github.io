@@ -33,7 +33,7 @@ const Projects = ({ observer, theme }) => {
     if (projectsFilter.category.toLowerCase() === 'all') {
       setDataActive(projectsData);
     } else {
-      setDataActive(projectsData.filter((project) => project.category.toLowerCase() === projectsFilter.category.toLowerCase()));
+      setDataActive(projectsData.filter((project) => project.category.toLowerCase().startsWith(projectsFilter.category.toLowerCase())));
     }
   }, [projectsFilter]);
 
