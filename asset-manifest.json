@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.e3c06f0f.chunk.css",
-    "main.js": "/static/js/main.ba66adab.chunk.js",
-    "main.js.map": "/static/js/main.ba66adab.chunk.js.map",
+    "main.css": "/static/css/main.de3505cc.chunk.css",
+    "main.js": "/static/js/main.bbc969ed.chunk.js",
+    "main.js.map": "/static/js/main.bbc969ed.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.258cceb0.js",
     "runtime-main.js.map": "/static/js/runtime-main.258cceb0.js.map",
     "static/js/2.b9740b14.chunk.js": "/static/js/2.b9740b14.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ba27cced.chunk.js": "/static/js/3.ba27cced.chunk.js",
     "static/js/3.ba27cced.chunk.js.map": "/static/js/3.ba27cced.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.e3c06f0f.chunk.css.map": "/static/css/main.e3c06f0f.chunk.css.map",
+    "static/css/main.de3505cc.chunk.css.map": "/static/css/main.de3505cc.chunk.css.map",
     "static/js/2.b9740b14.chunk.js.LICENSE.txt": "/static/js/2.b9740b14.chunk.js.LICENSE.txt",
     "static/media/general.scss": "/static/media/Montserrat-SemiBold.fa8441f3.ttf",
     "static/media/amva_web.png": "/static/media/amva_web.8f3e15e8.png",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.258cceb0.js",
     "static/js/2.b9740b14.chunk.js",
-    "static/css/main.e3c06f0f.chunk.css",
-    "static/js/main.ba66adab.chunk.js"
+    "static/css/main.de3505cc.chunk.css",
+    "static/js/main.bbc969ed.chunk.js"
   ]
 }
