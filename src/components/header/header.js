@@ -54,6 +54,7 @@ const Header = ({ getObserver, onThemeChange }) => {
       document.body.setAttribute('data-theme', theme);
       onThemeChange(theme);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme, themeLoaded]);
 
   if (pages[0] && pages[0].length && currentPage !== pages[0] && !firstEntry) {
