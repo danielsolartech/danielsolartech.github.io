@@ -15,45 +15,15 @@ const skills = [
     year: 2020,
   },
   {
-    name: 'NeoVim',
-    image: require('../../assets/skills/nvim.png').default,
-    description: 'Code editor.',
-    year: 2020,
-  },
-  {
     name: 'Rustlang',
     image: require('../../assets/skills/rust.png').default,
     description: 'Traits, structs, functions and pointers.',
     year: 2020,
   },
   {
-    name: 'Golang',
-    image: require('../../assets/skills/go.png').default,
-    description: 'Structs, pointers, slices and maps.',
-    year: 2020,
-  },
-  {
-    name: 'Heroku',
-    image: require('../../assets/skills/heroku.png').default,
-    description: 'Deploying Discord bots and websites.',
-    year: 2020,
-  },
-  {
     name: 'Figma',
     image: require('../../assets/skills/figma.png').default,
     description: 'Apps design and plugins.',
-    year: 2020,
-  },
-  {
-    name: 'Deno',
-    image: require('../../assets/skills/deno.png').default,
-    description: 'Deno concepts.',
-    year: 2020,
-  },
-  {
-    name: 'Ionic',
-    image: require('../../assets/skills/ionic.png').default,
-    description: 'Hibrid mobile apps like a music player.',
     year: 2020,
   },
   {
